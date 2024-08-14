@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.restauranteexemplo.reserva.dto.ClientDTO;
 import com.restauranteexemplo.reserva.entities.Client;
 import com.restauranteexemplo.reserva.services.ClientService;
 
@@ -26,15 +27,16 @@ public class ClientResource {
 	private ClientService service;
 
 	@GetMapping
-	public ResponseEntity<List<Client>> findAll() {
-		List<Client> clientes = service.findAll();
-		return ResponseEntity.ok().body(clientes);
+	public ResponseEntity<List<ClientDTO>> findAll() {
+		List<Client> clients = service.findAll();
+		List<ClientDTO> clientsDTO = clients.stream().map(client -> new ClientDTO(client)).toList();
+		return ResponseEntity.ok().body(clientsDTO);
 	}
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Client> findById(@PathVariable Long id) {
+	public ResponseEntity<ClientDTO> findById(@PathVariable Long id) {
 		Client obj = service.findById(id);
-		return ResponseEntity.ok().body(obj);
+		return ResponseEntity.ok().body(new ClientDTO(obj));
 	}
 
 	@DeleteMapping(value = "/{id}")
