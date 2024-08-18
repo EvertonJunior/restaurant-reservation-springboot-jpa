@@ -25,7 +25,7 @@ public class Reservation implements Serializable {
 
 	@OneToOne
 	@JoinColumn(name = "client_id")
-	private Client cliente;
+	private Client client;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy' 'HH:mm' '", timezone = "GMT")
 	private LocalDateTime initialDateTime;
@@ -42,7 +42,7 @@ public class Reservation implements Serializable {
 	public Reservation(Long id, Client client, LocalDateTime initialDateTime, LocalDateTime finalDateTime,
 			Table table) {
 		this.id = id;
-		this.cliente = client;
+		this.client = client;
 		this.initialDateTime = initialDateTime;
 		this.finalDateTime = finalDateTime;
 		this.table = table;
@@ -56,12 +56,12 @@ public class Reservation implements Serializable {
 		this.id = id;
 	}
 
-	public Client getCliente() {
-		return cliente;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setCliente(Client cliente) {
-		this.cliente = cliente;
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 	public LocalDateTime getInitialDateTime() {

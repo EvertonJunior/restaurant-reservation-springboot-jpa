@@ -32,6 +32,10 @@ public class ReservationResource {
 	public ResponseEntity<Reservation> findById(@PathVariable Long id) {
 		return ResponseEntity.ok().body(service.findById(id));
 	}
+	@GetMapping(value = "/client/{id}")
+	public ResponseEntity<Reservation> findByClientId(@PathVariable Long id){
+		return ResponseEntity.ok().body(service.findByClientId(id));
+	}
 
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> deleteById(@PathVariable Long id) {

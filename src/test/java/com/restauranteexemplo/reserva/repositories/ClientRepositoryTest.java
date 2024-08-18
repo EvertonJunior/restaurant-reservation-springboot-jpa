@@ -1,6 +1,5 @@
 package com.restauranteexemplo.reserva.repositories;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,8 +32,9 @@ class ClientRepositoryTest {
 	void testGivenClientObject_WhenSave_ThenReturnSavedClient() {
 		//GIVEN
 		//WHEN
+		Client savedClient = repository.save(client);
 		//THEN
-		Assertions.assertNotNull(client);
+		Assertions.assertNotNull(savedClient);
 		Assertions.assertTrue(client.getId() > 0);
 	}
 	

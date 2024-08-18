@@ -6,4 +6,5 @@ import com.restauranteexemplo.reserva.entities.Reservation;
 
 public interface ReservationRepository extends JpaRepository<Reservation, Long>{
 	
+	Reservation findByClientId(Long id);
 }

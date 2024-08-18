@@ -46,8 +46,12 @@ public class ReservationService {
 	public Reservation insert(Reservation reservation) {
 		return repository.save(reservation);
 	}
+	
+	public Reservation findByClientId(Long id) {
+		return repository.findByClientId(id);
+	}
 
-	@Scheduled(fixedRate = 60000) // Executa a cada minuto
+	@Scheduled(fixedRate = 60000) //
 	public void cleanUpExpiredReservation() {
 		List<Reservation> reservations = findAll();
 		for (Reservation x : reservations) {
