@@ -1,6 +1,7 @@
-package com.restauranteexemplo.reserva.repositories;
+package com.restauranteexemplo.reserva.repositories.integrationtests;
 
 import java.time.LocalDateTime;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -9,14 +10,20 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import com.restauranteexemplo.reserva.entities.Client;
 import com.restauranteexemplo.reserva.entities.Reservation;
 import com.restauranteexemplo.reserva.entities.Table;
+import com.restauranteexemplo.reserva.integrationtest.testcontainers.AbstractIntegrationTest;
+import com.restauranteexemplo.reserva.repositories.ClientRepository;
+import com.restauranteexemplo.reserva.repositories.ReservationRepository;
+import com.restauranteexemplo.reserva.repositories.TableRepository;
 
 @DataJpaTest
-class ReservationRepositoryTest {
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+class ReservationRepositoryIntegrationTest extends AbstractIntegrationTest{
 
 	@Autowired
 	private ReservationRepository repository;

@@ -1,7 +1,6 @@
 package com.restauranteexemplo.reserva.config;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,6 @@ public class DeveloperConfig implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
 		Client client1 = new Client(null, "Jose Everton", "jose@gmail.com", "1234567");
 		Client client2 = new Client(null, "Maria Eduarda", "maria@gmail.com", "87654321");
@@ -47,10 +45,10 @@ public class DeveloperConfig implements CommandLineRunner {
 
 		tableRepository.saveAll(Arrays.asList(table1, table2, table3));
 
-		Reservation reservation1 = new Reservation(null, client1, LocalDateTime.parse("20/08/2024 10:00", formatter),
-				LocalDateTime.parse("20/08/2024 18:20", formatter), table1);
-		Reservation reservation2 = new Reservation(null, client2, LocalDateTime.parse("20/08/2024 20:25", formatter),
-				LocalDateTime.parse("20/08/2024 22:30", formatter), table2);
+		Reservation reservation1 = new Reservation(null, client1, LocalDateTime.parse("2024-08-30T14:35:45"),
+				LocalDateTime.parse("2024-08-30T15:35:45"), table1);
+		Reservation reservation2 = new Reservation(null, client2, LocalDateTime.parse("2024-08-29T14:35:45"),
+				LocalDateTime.parse("2024-08-29T14:35:45"), table2);
 
 		reservationRepository.saveAll(Arrays.asList(reservation1, reservation2));
 	}

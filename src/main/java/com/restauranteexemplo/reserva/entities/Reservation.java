@@ -26,10 +26,11 @@ public class Reservation implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
-
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy' 'HH:mm' '", timezone = "GMT")
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	private LocalDateTime initialDateTime;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy' 'HH:mm' '", timezone = "GMT")
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	private LocalDateTime finalDateTime;
 
 	@OneToOne
