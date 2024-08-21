@@ -4,9 +4,9 @@
 
 ## Sobre o projeto
 
-Restaurant Reservation é uma aplicação back end construída para colocar meu conhecimento adquirido nos ultimos estudos em pratica.
+Restaurant Reservation é uma aplicação back end construída para colocar meu conhecimento adquirido nos últimos estudos em prática.
 
-A aplicação consiste em uma reserva de mesa, onde os dados são armazenados no Banco de Dados MySQL, e quando o tempo da reserva expira ela e apagada automaticamente.
+A aplicação consiste em uma reserva de mesa, onde os dados são armazenados no Banco de Dados MySQL, e quando o tempo da reserva expira ela é apagada automaticamente.
 
 ## MySql - Tabela Clients
 ![Clients](https://github.com/EvertonJunior/assets/blob/main/imagens/clients.PNG)
