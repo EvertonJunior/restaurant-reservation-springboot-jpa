@@ -11,14 +11,13 @@ A aplicação consiste em uma reserva de mesa, onde os dados são armazenados no
 ## MySql - Tabela Clients
 ![Clients](https://github.com/EvertonJunior/assets/blob/main/imagens/clients.PNG)
 
-## Tabela Tables
+## MySql - Tabela Tables
 ![Tables](https://github.com/EvertonJunior/assets/blob/main/imagens/tables.PNG)
 
 ## MySql - Tabela Reservations
 ![Reservations](https://github.com/EvertonJunior/assets/blob/main/imagens/reservas.PNG)
 
 # Tecnologias utilizadas
-## Back end
 - Java
 - Spring Boot
 - JPA / Hibernate
