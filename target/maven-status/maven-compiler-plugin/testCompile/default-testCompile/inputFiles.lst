@@ -1,0 +1,15 @@
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/ReservaApplicationTests.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/config/TestConfig.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/integrationtest/testcontainers/AbstractIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/repositories/integrationtests/ClientRepositoryIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/repositories/integrationtests/ReservationRepositoryIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/repositories/integrationtests/TableRepositoryIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/ClientResourceTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/ReservationResourceTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/TableResourceTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/integrationtests/ClientResourceIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/integrationtests/ReservationResourceIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/resources/integrationtests/TableResourceIntegrationTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/services/ClientServiceTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/services/ReservationServiceTest.java
+/home/everton/app/reserva/src/test/java/com/restauranteexemplo/reserva/services/TableServiceTest.java

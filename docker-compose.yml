@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.33
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: coursejpa
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: admin123
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
+
+  java_app:
+    image: app-reservas
+    build: ./reserva
+    working_dir: /reserva
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/coursejpa?useTimezone=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: docker
+      SPRING_DATASOURCE_PASSWORD: admin123
+    command: mvn spring-boot:run
+    depends_on:
+      - mysql
+    networks:
+      - app_network
+
+volumes:
+  mysql_data:
+
+networks:
+  app_network:
+    driver: bridge

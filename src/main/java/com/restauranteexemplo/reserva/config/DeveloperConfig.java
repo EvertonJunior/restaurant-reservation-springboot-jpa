@@ -48,7 +48,7 @@ public class DeveloperConfig implements CommandLineRunner {
 		Reservation reservation1 = new Reservation(null, client1, LocalDateTime.parse("2024-08-30T14:35:45"),
 				LocalDateTime.parse("2024-08-30T15:35:45"), table1);
 		Reservation reservation2 = new Reservation(null, client2, LocalDateTime.parse("2024-08-29T14:35:45"),
-				LocalDateTime.parse("2024-08-29T14:35:45"), table2);
+				LocalDateTime.parse("2024-08-29T15:35:45"), table2);
 
 		reservationRepository.saveAll(Arrays.asList(reservation1, reservation2));
 	}
